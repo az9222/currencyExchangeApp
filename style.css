@@ -43,3 +43,10 @@
     color: #466FB6;
     font-size: 20px;
 }
+
+.dollar {
+    font-family: 'PT Serif', serif;
+    font-size: 25px; 
+    margin-left: 10px;
+    color: #515151;
+}

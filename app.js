@@ -17,7 +17,7 @@ $(document).ready(function(){
     }
     // receiveConversionData("USD", "GBP");
 
-    $(".btn").click(function(){
+    $("#convert-btn").click(function(){
         $("#amount").text('');
         let countryNameConvertFrom = $('#start-country option:selected').attr('value');
         let conversionInput = Number.parseFloat($("#amount-convert-from").val());
@@ -28,6 +28,11 @@ $(document).ready(function(){
         } else {
         receiveConversionData(countryNameConvertFrom, countryNameConvertTo, conversionInput);
         }
+    })
+
+    $("#clear").click(function(){
+        let conversionInput = $("#amount-convert-from").val('');
+        $("#amount").text('');
     })
 
 })
