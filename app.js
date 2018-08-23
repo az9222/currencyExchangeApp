@@ -25,6 +25,10 @@ $(document).ready(function(){
         if (countryNameConvertFrom === countryNameConvertTo) {
             $("#amount").append("$"+conversionInput);
             alert("Change country!")
+        } else if (!conversionInput) {
+            alert("Enter an amount!");
+            let conversionInput = $("#amount-convert-from").val('');
+            $("#amount").text('');
         } else {
         receiveConversionData(countryNameConvertFrom, countryNameConvertTo, conversionInput);
         }
