@@ -37,6 +37,15 @@ $(document).ready(function(){
     $("#clear").click(function(){
         let conversionInput = $("#amount-convert-from").val('');
         $("#amount").text('');
+        $("#start-country").val("")
+        $("#end-country").val("")
+    })
+
+    $("#switch-btn").click(function(){
+        let countryNameConvertFrom = $('#start-country option:selected').attr('value');
+        let countryNameConvertTo = $('#end-country option:selected').attr('value');
+        $("#start-country").val(countryNameConvertTo)
+        $("#end-country").val(countryNameConvertFrom)
     })
 
 })
