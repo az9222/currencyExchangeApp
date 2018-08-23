@@ -17,7 +17,7 @@
     <div class="exchange-app-body">
     <div class="jumbotron">
         <h2 class="display-6">Welcome to Currency XChange!</h2>
-        <p class="intro">Convert every currency on-the-go with Currency XChange! We quicly offer live exchange rates with the click of a button!</p>
+        <p class="intro">Convert every currency on-the-go with Currency XChange! We quickly offer live exchange rates with the click of a button!</p>
     </div>
 
     <br>
@@ -32,10 +32,39 @@
                     <div class="input-group mb-3">
                         <select class="form-control" id="start-country">
                             <option value="USD">United States</option>
-                            <option value="GBP">England</option>
-                            <option value="CNY">China</option>
+                            <option value="AUD">Australian</option>
+                            <option value="BGN">Bulgaria</option>
+                            <option value="BRL">Brazil</option>
+                            <option value="CAD">Canada</option>
+                            <option value="HRK">Croatia</option>
+                            <option value="CZK">Czech Republic</option>
+                            <option value="DKK">Denmark</option>
+                            <option value="EUR">Euro</option>
+                            <option value="GBP">Guernsey</option>
+                            <option value="HKD">Hong Kong</option>
+                            <option value="HUF">Hungary</option>
+                            <option value="IDR">Indonesia</option>
+                            <option value="ILS">Israel</option>
+                            <option value="INR">India</option>
+                            <option value="ISK">China</option>
+                            <option value="JPY">China</option>
+                            <option value="KRW">China</option>
+                            <option value="MXN">China</option>
+                            <option value="MYR">China</option>
+                            <option value="NOK">China</option>
+                            <option value="NZD">China</option>
+                            <option value="PHP">China</option>
+                            <option value="PLN">China</option>
+                            <option value="RON">China</option>
+                            <option value="RUB">China</option>
+                            <option value="SEK">China</option>
+                            <option value="SGD">China</option>
+                            <option value="CHF">Switzerland</option>
+                            <option value="THB">China</option>
+                            <option value="TRY">China</option>
+                            <option value="ZAR">China</option>
                         </select>
-                        <input type="text" id="amount-convert-from" class="form-control" aria-label="Text input with dropdown button" placeholder="Enter amount to convert">
+                        <input type="text" id="amount-convert-from" class="form-control" aria-label="Text input with dropdown button" <span class="dollar">$</span>placeholder="Enter amount to convert">
                     </div>
             </div>
 
@@ -59,7 +88,8 @@
                 </div>
                 <br>
                 <div class="conversion-container">
-                     <span id="conversion-p">Conversion rate:</span>
+                     <span id="conversion-p">Converted amount:</span>
+                     <span id="amount"></span>
                 </div>
             </div>
 
