@@ -54,3 +54,13 @@
 #switch-btn {
     margin-left: 10px;
 }
+
+#flag-start {
+    margin-left:10px;
+    margin-top:-13px;
+}
+
+#flag-end {
+    margin-left: 246px; 
+    margin-top: -62px;
+}
