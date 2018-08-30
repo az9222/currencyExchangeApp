@@ -23,47 +23,47 @@
     <div class="row">
         <div class="col-10 col-md-10">
             <div class="conversion-from-container">
-                <!--Flag-->
                 <div class="first-label">
                     <label for="start-country">Select Country to Convert Money From:</label>
                 </div>
                 <div class="input-group mb-3">
                     <select class="form-control" id="start-country">
-                        <option value="USD">United States</option>
-                        <option value="AUD">Australia</option>
-                        <option value="BGN">Bulgaria</option>
-                        <option value="BRL">Brazil</option>
-                        <option value="CAD">Canada</option>
-                        <option value="CNY">China</option>
-                        <option value="HRK">Croatia</option>
-                        <option value="CZK">Czech Republic</option>
-                        <option value="DKK">Denmark</option>
-                        <option value="EUR">Euro</option>
-                        <option value="GBP">Guernsey</option>
-                        <option value="HKD">Hong Kong</option>
-                        <option value="HUF">Hungary</option>
-                        <option value="ISK">Iceland</option>
-                        <option value="IDR">Indonesia</option>
-                        <option value="ILS">Israel</option>
-                        <option value="INR">India</option>
-                        <option value="JPY">Japan</option>
-                        <option value="KRW">Korea</option>
-                        <option value="ZAR">Lesotho</option>
-                        <option value="MXN">Mexico</option>
-                        <option value="MYR">Malaysia</option>
-                        <option value="NZD">New Zealand</option>
-                        <option value="NOK">Norway</option>
-                        <option value="PHP">Philippines</option>
-                        <option value="PLN">Poland</option>
-                        <option value="RON">Romania</option>
-                        <option value="RUB">Russia</option>
-                        <option value="SGD">Singapore</option>
-                        <option value="SEK">Swede</option>
-                        <option value="CHF">Switzerland</option>
-                        <option value="THB">Thailand</option>
-                        <option value="TRY">Turkey</option>
+                        <option value="USD" code="US">United States</option>
+                        <option value="AUD" code="AU">Australia</option>
+                        <option value="BGN" code="BG">Bulgaria</option>
+                        <option value="BRL" code="BR">Brazil</option>
+                        <option value="CAD" code="CA">Canada</option>
+                        <option value="CNY" code="CN">China</option>
+                        <option value="HRK" code="HR">Croatia</option>
+                        <option value="CZK" code="CZ">Czech Republic</option>
+                        <option value="DKK" code="DK">Denmark</option>
+                        <option value="EUR" code="EU">Euro</option>
+                        <option value="GBP" code="GG">Guernsey</option>
+                        <option value="HKD" code="HK">Hong Kong</option>
+                        <option value="HUF" code="HU">Hungary</option>
+                        <option value="ISK" code="IS">Iceland</option>
+                        <option value="IDR" code="ID">Indonesia</option>
+                        <option value="ILS" code="IL">Israel</option>
+                        <option value="INR" code="IN">India</option>
+                        <option value="JPY" code="JP">Japan</option>
+                        <option value="KRW" code="KR">Korea</option>
+                        <option value="ZAR" code="LS">Lesotho</option>
+                        <option value="MXN" code="MX">Mexico</option>
+                        <option value="MYR" code="MY">Malaysia</option>
+                        <option value="NZD" code="NZ">New Zealand</option>
+                        <option value="NOK" code="NO">Norway</option>
+                        <option value="PHP" code="PH">Philippines</option>
+                        <option value="PLN" code="PL">Poland</option>
+                        <option value="RON" code="RO">Romania</option>
+                        <option value="RUB" code="RU">Russia</option>
+                        <option value="SGD" code="SG">Singapore</option>
+                        <option value="SEK" code="SE">Sweden</option>
+                        <option value="CHF" code="CH">Switzerland</option>
+                        <option value="THB" code="TH">Thailand</option>
+                        <option value="TRY" code="TR">Turkey</option>
                     </select>
                     <span class="currency" id="country-code"></span><input type="text" id="amount-convert-from" class="form-control" aria-label="Text input with dropdown button" placeholder="Enter amount to convert">
+                    <div class="flag-container"></div> 
                 </div>
             </div>
 
@@ -74,45 +74,44 @@
             </div>
 
             <div class="conversion-to-container">
-                <!--Flag-->
                 <div class="dropdown-to">
                 <div class="second-label">
                     <label for="end-country">Select Country to Convert Money to:</label>
                 </div>
                     <select class="form-control" id="end-country">
-                            <option value="USD">United States</option>
-                            <option value="AUD">Australia</option>
-                            <option value="BGN">Bulgaria</option>
-                            <option value="BRL">Brazil</option>
-                            <option value="CAD">Canada</option>
-                            <option value="CNY">China</option>
-                            <option value="HRK">Croatia</option>
-                            <option value="CZK">Czech Republic</option>
-                            <option value="DKK">Denmark</option>
-                            <option value="EUR">Euro</option>
-                            <option value="GBP">Guernsey</option>
-                            <option value="HKD">Hong Kong</option>
-                            <option value="HUF">Hungary</option>
-                            <option value="ISK">Iceland</option>
-                            <option value="IDR">Indonesia</option>
-                            <option value="ILS">Israel</option>
-                            <option value="INR">India</option>
-                            <option value="JPY">Japan</option>
-                            <option value="KRW">Korea</option>
-                            <option value="ZAR">Lesotho</option>
-                            <option value="MXN">Mexico</option>
-                            <option value="MYR">Malaysia</option>
-                            <option value="NZD">New Zealand</option>
-                            <option value="NOK">Norway</option>
-                            <option value="PHP">Philippines</option>
-                            <option value="PLN">Poland</option>
-                            <option value="RON">Romania</option>
-                            <option value="RUB">Russia</option>
-                            <option value="SGD">Singapore</option>
-                            <option value="SEK">Swede</option>
-                            <option value="CHF">Switzerland</option>
-                            <option value="THB">Thailand</option>
-                            <option value="TRY">Turkey</option>
+                            <option value="USD" code="US">United States</option>
+                            <option value="AUD" code="AU">Australia</option>
+                            <option value="BGN" code="BG">Bulgaria</option>
+                            <option value="BRL" code="BR">Brazil</option>
+                            <option value="CAD" code="CA">Canada</option>
+                            <option value="CNY" code="CN">China</option>
+                            <option value="HRK" code="HR">Croatia</option>
+                            <option value="CZK" code="CZ">Czech Republic</option>
+                            <option value="DKK" code="DK">Denmark</option>
+                            <option value="EUR" code="EU">Euro</option>
+                            <option value="GBP" code="GG">Guernsey</option>
+                            <option value="HKD" code="HK">Hong Kong</option>
+                            <option value="HUF" code="HU">Hungary</option>
+                            <option value="ISK" code="IS">Iceland</option>
+                            <option value="IDR" code="ID">Indonesia</option>
+                            <option value="ILS" code="IL">Israel</option>
+                            <option value="INR" code="IN">India</option>
+                            <option value="JPY" code="JP">Japan</option>
+                            <option value="KRW" code="KR">Korea</option>
+                            <option value="ZAR" code="LS">Lesotho</option>
+                            <option value="MXN" code="MX">Mexico</option>
+                            <option value="MYR" code="MY">Malaysia</option>
+                            <option value="NZD" code="NZ">New Zealand</option>
+                            <option value="NOK" code="NO">Norway</option>
+                            <option value="PHP" code="PH">Philippines</option>
+                            <option value="PLN" code="PL">Poland</option>
+                            <option value="RON" code="RO">Romania</option>
+                            <option value="RUB" code="RU">Russia</option>
+                            <option value="SGD" code="SG">Singapore</option>
+                            <option value="SEK" code="SE">Sweden</option>
+                            <option value="CHF" code="CH">Switzerland</option>
+                            <option value="THB" code="TH">Thailand</option>
+                            <option value="TRY" code="TR">Turkey</option>
                     </select>
                 </div>
                 </div>
@@ -120,6 +119,7 @@
                 <div class="conversion-container">
                      <span id="conversion-p">Converted amount:</span>
                      <span id="amount"></span>
+                     <div class="end-flag-container"></div>
                         <div class="button-container">
                             <button type="button" class="btn btn-primary" id="clear">Start Over</button>
                         </div>

@@ -51,7 +51,10 @@ $(document).ready(function(){
             }
         })
     }
-    // receiveConversionData("USD", "GBP");
+    
+    function addFlag () {
+
+    }
 
     $("#convert-btn").click(function(){
         $("#amount").text('');
@@ -66,23 +69,38 @@ $(document).ready(function(){
             let conversionInput = $("#amount-convert-from").val('');
             $("#amount").text('');
         } else {
+            $(".end-flag-container").html("");
             let endCode = currencyMapping[countryNameConvertTo].toString();
             receiveConversionData(countryNameConvertFrom, countryNameConvertTo, conversionInput);
             $("#amount").html(`&#${endCode};`)
+
+            let img = $('<img id="flag-end">');
+            let countryCodeId = $("#end-country option:selected").attr('code');
+            img.attr('src', "https://www.countryflags.io/"+countryCodeId+"/flat/64.png");
+            img.css("margin-left", "246px").css('margin-top', '-62px')
+            $(".end-flag-container").append(img);
         }
     })
 
     $("#start-country").change(function() {
+        $(".flag-container").html("");
         let countryValue = $("#start-country option:selected").val()
         let code = currencyMapping[countryValue].toString()
         $("#country-code").html(`&#${code};`);
+        let img = $('<img id="flag-start">');
+        let countryCodeId = $('#start-country option:selected').attr('code');
+        img.attr('src', "https://www.countryflags.io/"+countryCodeId+"/flat/64.png")
+        img.css('margin-left', '10px').css('margin-top', '-13px');
+        $(".flag-container").append(img);
     })
 
     $("#clear").click(function(){
         let conversionInput = $("#amount-convert-from").val('');
         $("#amount").text('');
-        $("#start-country").val("")
-        $("#end-country").val("")
+        $("#start-country").val("");
+        $("#end-country").val("");
+        $(".flag-container").html("");
+        $(".end-flag-container").html("");
     })
 
     $("#switch-btn").click(function(){
@@ -90,6 +108,12 @@ $(document).ready(function(){
         let countryNameConvertTo = $('#end-country option:selected').attr('value');
         $("#start-country").val(countryNameConvertTo)
         $("#end-country").val(countryNameConvertFrom)
+        let flagFromStart = $("#flag-start")
+        let flagFromEnd = $("#flag-end");
+        $(".flag-container").html(flagFromEnd);
+        $(".end-flag-container").html(flagFromStart);
+        $("#flag-end").css('margin-left', '10px').css('margin-top', '-13px');
+        $("#flag-start").css("margin-left", "246px").css('margin-top', '-62px')
     })
 
     $("#change-title").click(function(){
