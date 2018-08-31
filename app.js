@@ -65,30 +65,24 @@ $(document).ready(function(){
             let conversionInput = $("#amount-convert-from").val('');
             $("#amount").text('');
         } else {
-            $(".end-flag-container").html("");
-            $(".end-flag-container").removeAttr("src");
             let endCode = currencyMapping[countryNameConvertTo].toString();
             receiveConversionData(countryNameConvertFrom, countryNameConvertTo, conversionInput);
             $("#amount").html(`&#${endCode};`)
-            let img = $('<img id="flag-end">');
+            let img = $("#flag-end");
             let countryCodeId = $("#end-country option:selected").attr('code');
             img.attr('src', "https://www.countryflags.io/"+countryCodeId+"/flat/64.png");
-            img.css("margin-left", "246px").css('margin-top', '-62px')
-            $(".end-flag-container").append(img);
+            img.css("margin-left", "246px").css('margin-top', '-62px').css("position", "relative");
         }
     })
 
     $("#start-country").change(function() {
-        $(".flag-container").removeAttr("src");
-        $(".flag-container").html("");
         let countryValue = $("#start-country option:selected").val()
         let code = currencyMapping[countryValue].toString()
         $("#country-code").html(`&#${code};`);
         let countryCodeId = $('#start-country option:selected').attr('code');
-        let img = $('<img id="flag-start">')
-        $(img).attr('src', "https://www.countryflags.io/"+countryCodeId+"/flat/64.png");
-        $(img).css('margin-left', '10px').css('margin-top', '-13px');
-        $(".flag-container").append(img);
+        let img = $("#flag-start");
+        img.attr('src', "https://www.countryflags.io/"+countryCodeId+"/flat/64.png");
+        img.css('margin-left', '10px').css('margin-top', '-13px');
     })
 
     $("#clear").click(function(){
@@ -98,6 +92,7 @@ $(document).ready(function(){
         $("#end-country").val("");
         $(".flag-container").html("");
         $(".end-flag-container").html("");
+        $("#country-code").html("");
     })
 
     $("#switch-btn").click(function(){
@@ -105,12 +100,14 @@ $(document).ready(function(){
         let countryNameConvertTo = $('#end-country option:selected').attr('value');
         $("#start-country").val(countryNameConvertTo)
         $("#end-country").val(countryNameConvertFrom)
+
         let flagFromStart = $("#flag-start")
-        let flagFromEnd = $("#flag-end");
-        $(".flag-container").append(flagFromEnd);
-        $(".end-flag-container").append(flagFromStart);
-        $("#flag-end").css('margin-left', '10px').css('margin-top', '-13px');
-        $("#flag-start").css("margin-left", "246px").css('margin-top', '-62px');
+        let flagFromEnd = $("#flag-end")
+        let flagURLFromStart = flagFromStart.attr("src")
+        let flagURLFromEnd = flagFromEnd.attr("src");
+        
+        flagFromEnd.attr('src', flagURLFromStart);
+        flagFromStart.attr('src', flagURLFromEnd);
     })
 
     $("#change-title").click(function(){
