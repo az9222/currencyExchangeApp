@@ -5,10 +5,13 @@
 
 .jumbotron {
     background-color: #CFEFF6;
+    width: 100%;
+    margin-left:0px;
 }
 
 body {
     background-image: url('https://i.pinimg.com/originals/85/a5/1f/85a51f6344cca7cd219fc5a8523e9b9b.jpg');
+    margin-left: 20px
 }
 .intro {
     font-family: 'PT Serif', serif;
@@ -71,3 +74,7 @@ body {
     margin-left: 246px; 
     margin-top: -62px;
 }
+
+/* #navbarSupportedContent {
+    position: relative;
+}  */
