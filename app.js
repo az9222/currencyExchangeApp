@@ -51,10 +51,6 @@ $(document).ready(function(){
             }
         })
     }
-    
-    function addFlag () {
-
-    }
 
     $("#convert-btn").click(function(){
         $("#amount").text('');
@@ -109,14 +105,12 @@ $(document).ready(function(){
         let countryNameConvertTo = $('#end-country option:selected').attr('value');
         $("#start-country").val(countryNameConvertTo)
         $("#end-country").val(countryNameConvertFrom)
-
         let flagFromStart = $("#flag-start")
         let flagFromEnd = $("#flag-end");
         $(".flag-container").append(flagFromEnd);
         $(".end-flag-container").append(flagFromStart);
         $("#flag-end").css('margin-left', '10px').css('margin-top', '-13px');
         $("#flag-start").css("margin-left", "246px").css('margin-top', '-62px');
-        (".end-flag-container").html("");
     })
 
     $("#change-title").click(function(){
